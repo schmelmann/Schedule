@@ -1,12 +1,8 @@
-export function Button({ children, onClick, className = "", type = "button" }) {
+export function Input({ className = "", ...props }) {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={`bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded ${className}`}
-    >
-      {children}
-    </button>
+    <input
+      {...props}
+      className={`border rounded px-3 py-2 w-full text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 ${className}`}
+    />
   );
 }
-
